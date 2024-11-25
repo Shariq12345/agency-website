@@ -80,6 +80,7 @@ export function TechStackSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="text-center max-w-3xl mx-auto mb-16"
+            viewport={{ once: true }}
           >
             <Badge variant="outline" className="mb-4">
               Our Technology Stack
@@ -105,6 +106,7 @@ export function TechStackSection() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   onMouseEnter={() => setHoveredId(stack.id)}
                   onMouseLeave={() => setHoveredId(null)}
+                  viewport={{ once: true }}
                 >
                   <Card className="relative overflow-hidden p-6 h-full transition-all duration-300 hover:shadow-lg">
                     {/* Animated Background Gradient */}
@@ -157,6 +159,7 @@ export function TechStackSection() {
                               }}
                               transition={{ duration: 1, ease: "easeOut" }}
                               className="h-full bg-primary"
+                              viewport={{ once: true }}
                             />
                           </div>
                         </div>
@@ -176,6 +179,7 @@ export function TechStackSection() {
                               }}
                               transition={{ duration: 1, ease: "easeOut" }}
                               className="h-full bg-primary"
+                              viewport={{ once: true }}
                             />
                           </div>
                         </div>

@@ -67,6 +67,7 @@ const FeaturedProjects = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
               <Badge variant="outline" className="mb-4 px-4 py-1 text-sm">
@@ -89,6 +90,7 @@ const FeaturedProjects = () => {
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 20 }}
+                viewport={{ once: true }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group"
@@ -161,6 +163,7 @@ const FeaturedProjects = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
           >
             <Button
               size="lg"

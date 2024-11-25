@@ -58,6 +58,7 @@ export function TeamSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="max-w-3xl mx-auto text-center mb-20"
+            viewport={{ once: true }}
           >
             <Badge variant="outline" className="mb-4">
               Our Team
@@ -79,6 +80,7 @@ export function TeamSection() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
               >
                 <Card className="group relative overflow-hidden">
                   <div className="p-6">

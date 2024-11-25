@@ -1,5 +1,5 @@
 import { HeroSection } from "@/components/hero";
-import FeaturedProjects from "@/components/featured-section";
+import FeaturedProjects from "@/components/featured-project";
 import { Testimonials } from "@/components/testimonials";
 import { TeamSection } from "@/components/team-section";
 import { ProcessTimeline } from "@/components/process-timeline";

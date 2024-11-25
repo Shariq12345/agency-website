@@ -113,6 +113,7 @@ export function FAQSection() {
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
+                        viewport={{ once: true }}
                         transition={{ duration: 0.2 }}
                       >
                         <p className="mt-4 text-muted-foreground">

@@ -30,6 +30,7 @@ export function ContactSection() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
               <Badge variant="outline" className="mb-4">
@@ -51,6 +52,7 @@ export function ContactSection() {
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5 }}
               className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border shadow-lg"
             >
@@ -116,6 +118,7 @@ export function ContactSection() {
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5 }}
               className="space-y-8 lg:pl-8"
             >

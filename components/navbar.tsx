@@ -1,18 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import {
-  Menu,
-  X,
-  Code,
-  Smartphone,
-  Layout,
-  // PaintBrush,
-  Phone,
-  Info,
-  Home,
-  FileText,
-  ArrowBigUp,
-} from "lucide-react"; // Importing specific icons for sub-items
+import { Menu, X, Code, Smartphone, Layout, ArrowBigUp } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -23,10 +11,14 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { ModeToggle } from "./mode-toggle";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,51 +28,55 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleLinkClick = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   const navItems = [
     {
       title: "Home",
-      href: "#",
+      href: "/",
     },
     {
       title: "Services",
       items: [
         {
           title: "Web Development",
-          href: "#",
+          href: "/services/web",
           icon: (
-            <Code className="h-5 w-5 text-gray-600 group-hover:text-primary" />
-          ), // Icon for Web Development
+            <Code className="h-5 w-5 group-hover:text-primary dark:group-hover:text-primary" />
+          ),
         },
         {
           title: "Mobile Development",
-          href: "#",
+          href: "/services/mobile",
           icon: (
-            <Smartphone className="h-5 w-5 text-gray-600 group-hover:text-primary" />
-          ), // Icon for Mobile Development
+            <Smartphone className="h-5 w-5 group-hover:text-primary dark:group-hover:text-primary" />
+          ),
         },
         {
           title: "UI/UX Design",
-          href: "#",
+          href: "/services/design",
           icon: (
-            <Layout className="h-5 w-5 text-gray-600 group-hover:text-primary" />
-          ), // Icon for UI/UX Design
+            <Layout className="h-5 w-5 group-hover:text-primary dark:group-hover:text-primary" />
+          ),
         },
         {
           title: "Branding",
-          href: "#",
+          href: "/services/branding",
           icon: (
-            <ArrowBigUp className="h-5 w-5 text-gray-600 group-hover:text-primary" />
-          ), // Icon for Branding
+            <ArrowBigUp className="h-5 w-5 group-hover:text-primary dark:group-hover:text-primary" />
+          ),
         },
       ],
     },
     {
       title: "About",
-      href: "#",
+      href: "/about",
     },
     {
       title: "Contact",
-      href: "#contact",
+      href: "/contact",
     },
   ];
 
@@ -89,7 +85,7 @@ const Navbar = () => {
       className={cn(
         "fixed w-full z-50 transition-all duration-300",
         isScrolled
-          ? "bg-white/25 backdrop-blur-xl border-b border-white/30 supports-[backdrop-filter]:bg-white/10"
+          ? "bg-background/80 dark:bg-background/80 backdrop-blur-xl border-b border-border"
           : "bg-transparent"
       )}
     >
@@ -97,9 +93,9 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="text-xl font-bold text-primary">
-              Nexus.
-            </a>
+            <Link href="/" className="text-xl font-extrabold text-primary">
+              ASK.
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -110,18 +106,27 @@ const Navbar = () => {
                   <NavigationMenuItem key={item.title}>
                     {item.items ? (
                       <>
-                        <NavigationMenuTrigger className="group backdrop-blur-sm bg-white/10 hover:bg-white/20 transition-colors flex items-center space-x-2">
-                          {""}
+                        <NavigationMenuTrigger
+                          className={cn(
+                            "group backdrop-blur-sm bg-background/10 dark:bg-background/10 hover:bg-accent dark:hover:bg-accent transition-colors",
+                            pathname.startsWith(item.href) && "text-primary"
+                          )}
+                        >
                           <span>{item.title}</span>
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
-                          <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 backdrop-blur-xl bg-white/50 rounded-lg border border-white/30">
+                          <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 backdrop-blur-xl bg-background/80 dark:bg-background/80 rounded-lg border border-border">
                             {item.items.map((subItem) => (
                               <li key={subItem.title}>
                                 <NavigationMenuLink asChild>
-                                  <a
+                                  <Link
                                     href={subItem.href}
-                                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-white/30 focus:bg-white/30"
+                                    onClick={handleLinkClick}
+                                    className={cn(
+                                      "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent dark:hover:bg-accent focus:bg-accent",
+                                      pathname === subItem.href &&
+                                        "bg-accent text-accent-foreground"
+                                    )}
                                   >
                                     <div className="flex items-center space-x-2">
                                       {subItem.icon}
@@ -129,7 +134,7 @@ const Navbar = () => {
                                         {subItem.title}
                                       </span>
                                     </div>
-                                  </a>
+                                  </Link>
                                 </NavigationMenuLink>
                               </li>
                             ))}
@@ -138,12 +143,17 @@ const Navbar = () => {
                       </>
                     ) : (
                       <NavigationMenuLink asChild>
-                        <a
+                        <Link
                           href={item.href}
-                          className="group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-white/20 focus:bg-white/20 backdrop-blur-sm"
+                          onClick={handleLinkClick}
+                          className={cn(
+                            "group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent dark:hover:bg-accent",
+                            pathname === item.href &&
+                              "bg-accent text-accent-foreground"
+                          )}
                         >
-                          <span className="ml-2">{item.title}</span>
-                        </a>
+                          <span>{item.title}</span>
+                        </Link>
                       </NavigationMenuLink>
                     )}
                   </NavigationMenuItem>
@@ -152,26 +162,30 @@ const Navbar = () => {
             </NavigationMenu>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button
-              variant="default"
-              className="backdrop-blur-sm bg-primary/80 hover:bg-primary/90"
-            >
-              Start Project
-            </Button>
-          </div>
+          <div className="flex items-center space-x-4">
+            <ModeToggle />
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="hover:bg-white/20"
-            >
-              {isMobileMenuOpen ? <X /> : <Menu />}
-            </Button>
+            {/* CTA Button */}
+            <div className="hidden md:block">
+              <Button
+                variant="default"
+                className="bg-primary/90 hover:bg-primary dark:bg-primary/90 dark:hover:bg-primary"
+              >
+                Start Project
+              </Button>
+            </div>
+
+            {/* Mobile menu button */}
+            <div className="md:hidden">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="hover:bg-accent dark:hover:bg-accent"
+              >
+                {isMobileMenuOpen ? <X /> : <Menu />}
+              </Button>
+            </div>
           </div>
         </div>
       </div>
@@ -179,7 +193,7 @@ const Navbar = () => {
       {/* Mobile menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 backdrop-blur-xl bg-white/50 border-t border-white/30">
+          <div className="px-2 pt-2 pb-3 space-y-1 backdrop-blur-xl bg-background/80 dark:bg-background/80 border-t border-border">
             {navItems.map((item) => (
               <div key={item.title}>
                 {item.items ? (
@@ -189,31 +203,41 @@ const Navbar = () => {
                     </div>
                     <div className="pl-4">
                       {item.items.map((subItem) => (
-                        <a
+                        <Link
                           key={subItem.title}
                           href={subItem.href}
-                          className="block px-3 py-2 text-sm text-gray-600 hover:bg-white/30 rounded-md transition-colors"
+                          onClick={handleLinkClick}
+                          className={cn(
+                            "block px-3 py-2 text-sm hover:bg-accent dark:hover:bg-accent rounded-md transition-colors",
+                            pathname === subItem.href &&
+                              "bg-accent text-accent-foreground"
+                          )}
                         >
                           <div className="flex items-center space-x-2">
                             {subItem.icon}
                             <span>{subItem.title}</span>
                           </div>
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </>
                 ) : (
-                  <a
+                  <Link
                     href={item.href}
-                    className="block px-3 py-2 text-sm font-medium hover:bg-white/30 rounded-md transition-colors"
+                    onClick={handleLinkClick}
+                    className={cn(
+                      "block px-3 py-2 text-sm font-medium hover:bg-accent dark:hover:bg-accent rounded-md transition-colors",
+                      pathname === item.href &&
+                        "bg-accent text-accent-foreground"
+                    )}
                   >
                     {item.title}
-                  </a>
+                  </Link>
                 )}
               </div>
             ))}
             <div className="px-3 py-2">
-              <Button className="w-full backdrop-blur-sm bg-primary/80 hover:bg-primary/90">
+              <Button className="w-full bg-primary/90 hover:bg-primary dark:bg-primary/90 dark:hover:bg-primary">
                 Start Project
               </Button>
             </div>

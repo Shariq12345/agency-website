@@ -72,6 +72,7 @@ export function ProcessTimeline() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               className="relative flex items-start mb-12 last:mb-0"
+              viewport={{ once: true }}
             >
               {/* Connection Line */}
               {index !== steps.length - 1 && (
@@ -80,6 +81,7 @@ export function ProcessTimeline() {
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.3 }}
                   className="absolute top-12 left-6 bottom-0 w-px bg-border"
+                  viewport={{ once: true }}
                 />
               )}
 
@@ -87,6 +89,7 @@ export function ProcessTimeline() {
               <motion.div
                 whileHover={{ scale: 1.2, rotate: 10 }}
                 className={`relative flex-shrink-0 w-12 h-12 rounded-full ${step.bgColor} flex items-center justify-center mr-6 shadow-lg`}
+                viewport={{ once: true }}
               >
                 <step.icon className={`w-6 h-6 ${step.color}`} />
               </motion.div>
