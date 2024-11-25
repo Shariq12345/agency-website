@@ -205,7 +205,7 @@ export default function UIUXDesignPage() {
                   Ready to Transform Your User Experience?
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-                  Let's discuss how our UI/UX design services can help you
+                  Let&apos;s discuss how our UI/UX design services can help you
                   create exceptional digital experiences that your users will
                   love.
                 </p>

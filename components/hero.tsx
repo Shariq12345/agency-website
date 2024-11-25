@@ -104,6 +104,7 @@ export function HeroSection() {
           <motion.div
             key={index}
             className={`absolute ${position} group`}
+            //@ts-ignore
             variants={floatingAnimation}
             initial="initial"
             animate={controls}

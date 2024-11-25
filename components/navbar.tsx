@@ -109,6 +109,7 @@ const Navbar = () => {
                         <NavigationMenuTrigger
                           className={cn(
                             "group backdrop-blur-sm bg-background/10 dark:bg-background/10 hover:bg-accent dark:hover:bg-accent transition-colors",
+                            //@ts-ignore
                             pathname.startsWith(item.href) && "text-primary"
                           )}
                         >

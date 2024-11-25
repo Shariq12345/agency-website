@@ -213,7 +213,7 @@ const WebDevelopmentPage = () => {
                   Ready to Start Your Project?
                 </h2>
                 <p className="text-primary-foreground/90 max-w-2xl mx-auto mb-8">
-                  Let's discuss how we can help you achieve your digital goals
+                  Let&apos;s discuss how we can help you achieve your digital goals
                   with a custom web development solution.
                 </p>
                 <Button variant="secondary" size="lg" className="min-w-[200px]">
