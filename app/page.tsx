@@ -17,7 +17,6 @@ export default function Home() {
       <TechStackSection />
       <TeamSection />
       <FAQSection />
-      <ContactSection />
     </div>
   );
 }

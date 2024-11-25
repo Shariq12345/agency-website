@@ -32,6 +32,8 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const hasMeetingUrl = pathname === "/meeting";
+
   const navItems = [
     {
       title: "Home",
@@ -167,14 +169,18 @@ const Navbar = () => {
             <ModeToggle />
 
             {/* CTA Button */}
-            <div className="hidden md:block">
-              <Button
-                variant="default"
-                className="bg-primary/90 hover:bg-primary dark:bg-primary/90 dark:hover:bg-primary"
-              >
-                Start Project
-              </Button>
-            </div>
+            {!hasMeetingUrl && (
+              <Link href="/meeting">
+                <div className="hidden md:block">
+                  <Button
+                    variant="default"
+                    className="bg-primary/90 hover:bg-primary dark:bg-primary/90 dark:hover:bg-primary"
+                  >
+                    Book a Call
+                  </Button>
+                </div>
+              </Link>
+            )}
 
             {/* Mobile menu button */}
             <div className="md:hidden">
@@ -237,11 +243,13 @@ const Navbar = () => {
                 )}
               </div>
             ))}
-            <div className="px-3 py-2">
-              <Button className="w-full bg-primary/90 hover:bg-primary dark:bg-primary/90 dark:hover:bg-primary">
-                Start Project
-              </Button>
-            </div>
+            {!hasMeetingUrl && (
+              <div className="px-3 py-2">
+                <Button className="w-full bg-primary/90 hover:bg-primary dark:bg-primary/90 dark:hover:bg-primary">
+                  Book Call
+                </Button>
+              </div>
+            )}
           </div>
         </div>
       )}

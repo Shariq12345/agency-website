@@ -14,10 +14,10 @@ const FeaturedProjects = () => {
   const projects = [
     {
       id: 1,
-      title: "Quantum E-Commerce Platform",
+      title: "Brownie Bee Cake Shop",
       description:
-        "A next-gen shopping experience with AI-powered recommendations and seamless checkout flow.",
-      image: "/api/placeholder/800/600",
+        "A modern e-commerce platform with a focus on delightful user experience and high conversion rates.",
+      image: "/project1.png",
       categories: ["E-Commerce", "UI/UX", "Development"],
       stats: {
         increase: "+127%",

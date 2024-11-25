@@ -7,33 +7,34 @@ import { motion } from "framer-motion";
 import {
   ArrowRight,
   Code,
-  Rocket,
+  Laptop,
   Database,
   Layout,
-  Users,
+  Server,
   CheckCircle,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const WebDevelopmentPage = () => {
   const services = [
     {
       icon: <Code className="h-6 w-6" />,
-      title: "Custom Web Development",
+      title: "Web Application Development",
       description:
-        "Tailored web solutions built with cutting-edge technologies to meet your specific business needs.",
+        "Custom web applications built with modern frameworks and best practices.",
     },
     {
       icon: <Layout className="h-6 w-6" />,
-      title: "Progressive Web Apps",
+      title: "Frontend Development",
       description:
-        "Fast, reliable, and engaging web applications that work offline and provide app-like experiences.",
+        "Responsive and interactive user interfaces using React, Next.js, and modern web technologies.",
     },
     {
-      icon: <Database className="h-6 w-6" />,
-      title: "E-commerce Solutions",
+      icon: <Server className="h-6 w-6" />,
+      title: "Backend Development",
       description:
-        "Scalable online stores with secure payment gateways and optimal user experience.",
+        "Robust server-side solutions with Node.js, Express, and scalable database architectures.",
     },
   ];
 
@@ -43,70 +44,80 @@ const WebDevelopmentPage = () => {
     { name: "TypeScript", image: "/tech/typescript.svg" },
     { name: "Node.js", image: "/tech/nodejs.svg" },
     { name: "PostgreSQL", image: "/tech/postgresql.svg" },
-    { name: "AWS", image: "/tech/aws.svg" },
+    { name: "Docker", image: "/tech/docker.svg" },
   ];
 
-  const benefits = [
+  const developmentProcess = [
     {
-      icon: <Rocket className="h-6 w-6 text-primary" />,
-      title: "Performance Optimized",
+      icon: <Laptop className="h-6 w-6 text-primary" />,
+      title: "Consultation & Planning",
       description:
-        "Lightning-fast load times and optimal performance across all devices.",
+        "Detailed project requirements gathering and strategic roadmap development.",
     },
     {
-      icon: <Users className="h-6 w-6 text-primary" />,
-      title: "User-Centric Design",
+      icon: <Database className="h-6 w-6 text-primary" />,
+      title: "Custom Development",
       description:
-        "Intuitive interfaces that prioritize user experience and engagement.",
+        "End-to-end web solution implementation with agile methodologies.",
     },
     {
       icon: <CheckCircle className="h-6 w-6 text-primary" />,
-      title: "Quality Assured",
+      title: "Deployment & Support",
       description:
-        "Rigorous testing and quality assurance for reliable applications.",
+        "Seamless deployment, ongoing maintenance, and continuous improvement.",
     },
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 lg:py-28">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-background" />
+      <section className="relative overflow-hidden pt-24 pb-16 bg-gradient-to-br from-primary/5 to-background">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -top-1/4 -left-1/4 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl" />
+          <div className="absolute -bottom-1/4 -right-1/4 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl" />
+        </div>
+
         <div className="container relative mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             className="max-w-3xl mx-auto text-center"
           >
             <Badge variant="outline" className="mb-4">
               Web Development Services
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
-              Transform Your Digital Presence
+            <h1
+              className="text-4xl md:text-5xl font-bold mb-6 
+              bg-gradient-to-r from-primary to-primary/70 
+              bg-clip-text text-transparent
+              leading-tight"
+            >
+              Professional Web Development Solutions
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
-              We craft modern, scalable, and high-performance web solutions that
-              drive business growth and user engagement.
+              Crafting robust, scalable web applications tailored to your
+              business needs.
             </p>
-            <Button size="lg" className="min-w-[200px]">
-              Start Your Project
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Link href="/meeting">
+              <Button size="lg" className="min-w-[200px]">
+                Book a Call
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Services Grid */}
-        <section className="py-20 bg-muted/50">
+        {/* Services Section */}
+        <section className="py-20 bg-muted/10">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <h2 className="text-3xl font-bold mb-4">
                 Our Web Development Services
               </h2>
               <p className="text-muted-foreground">
-                Comprehensive web solutions tailored to your business needs
+                Comprehensive solutions for your digital transformation
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -143,7 +154,7 @@ const WebDevelopmentPage = () => {
             <div className="max-w-3xl mx-auto text-center mb-16">
               <h2 className="text-3xl font-bold mb-4">Our Technology Stack</h2>
               <p className="text-muted-foreground">
-                We use cutting-edge technologies to build scalable solutions
+                Cutting-edge technologies for modern web solutions
               </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
@@ -171,20 +182,21 @@ const WebDevelopmentPage = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-20 bg-muted/50">
-          <div className="container mx-">
+        {/* Development Process */}
+        <section className="py-20 bg-muted/10">
+          <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-16">
-              <h2 className="text-3xl font-bold mb-4">Why Choose Us</h2>
+              <h2 className="text-3xl font-bold mb-4">
+                Our Development Process
+              </h2>
               <p className="text-muted-foreground">
-                Our development approach ensures quality, performance, and
-                reliability
+                Structured approach to delivering high-quality web solutions
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+              {developmentProcess.map((process, index) => (
                 <motion.div
-                  key={benefit.title}
+                  key={process.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -192,12 +204,12 @@ const WebDevelopmentPage = () => {
                   className="text-center"
                 >
                   <div className="inline-flex p-3 rounded-lg bg-primary/10 mb-4">
-                    {benefit.icon}
+                    {process.icon}
                   </div>
                   <h3 className="text-xl font-semibold mb-2">
-                    {benefit.title}
+                    {process.title}
                   </h3>
-                  <p className="text-muted-foreground">{benefit.description}</p>
+                  <p className="text-muted-foreground">{process.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -210,14 +222,14 @@ const WebDevelopmentPage = () => {
             <Card className="bg-primary text-primary-foreground">
               <CardContent className="p-12 text-center">
                 <h2 className="text-3xl font-bold mb-4">
-                  Ready to Start Your Project?
+                  Ready to Build Your Web Solution?
                 </h2>
                 <p className="text-primary-foreground/90 max-w-2xl mx-auto mb-8">
-                  Let&apos;s discuss how we can help you achieve your digital goals
-                  with a custom web development solution.
+                  Let&apos;s discuss how we can help you create a powerful web
+                  application that drives your business forward.
                 </p>
                 <Button variant="secondary" size="lg" className="min-w-[200px]">
-                  Get in Touch
+                  Contact Us
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </CardContent>

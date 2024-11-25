@@ -9,11 +9,11 @@ import Image from "next/image";
 const teamMembers = [
   {
     id: 1,
-    name: "Sarah Chen",
-    role: "Lead Designer",
+    name: "Arman Noyda",
+    role: "Client Success Manager",
     image: "/team/sarah.jpg", // Add team member images to your public folder
-    bio: "Passionate about creating beautiful, user-centric designs that drive results.",
-    specialties: ["UI/UX", "Brand Design"],
+    bio: "Ensuring client satisfaction and success through innovative solutions.",
+    specialties: ["Client Relations", "Project Management"],
     social: {
       linkedin: "https://linkedin.com/in/sarahchen",
       twitter: "https://twitter.com/sarahchen",
@@ -22,10 +22,10 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: "Michael Roberts",
+    name: "Shariq Shaikh",
     role: "Technical Lead",
     image: "/team/michael.jpg",
-    bio: "Full-stack developer with 8+ years of experience in building scalable applications.",
+    bio: "Building scalable web applications with cutting-edge technologies.",
     specialties: ["React", "Node.js"],
     social: {
       linkedin: "https://linkedin.com/in/michaelroberts",
@@ -34,11 +34,11 @@ const teamMembers = [
   },
   {
     id: 3,
-    name: "Emma Thompson",
-    role: "Project Manager",
+    name: "Khwahish",
+    role: "SEO & Brand Expert",
     image: "/team/emma.jpg",
-    bio: "Certified PM focused on delivering exceptional results through agile methodologies.",
-    specialties: ["Agile", "Strategy"],
+    bio: "Helping brands grow their online presence through effective SEO strategies.",
+    specialties: ["SEO", "Content Marketing"],
     social: {
       linkedin: "https://linkedin.com/in/emmathompson",
       twitter: "https://twitter.com/emmathompson",

@@ -12,6 +12,7 @@ import {
   Smartphone,
   Rocket,
 } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 
 export function HeroSection() {
@@ -178,13 +179,15 @@ export function HeroSection() {
             className="flex flex-col items-center justify-center gap-4 sm:flex-row"
             viewport={{ once: true }}
           >
-            <Button
-              size="lg"
-              className="min-w-[200px] group bg-primary hover:bg-primary/90 transition-all duration-300"
-            >
-              Start Your Project
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </Button>
+            <Link href={"/meeting"}>
+              <Button
+                size="lg"
+                className="min-w-[200px] group bg-primary hover:bg-primary/90 transition-all duration-300"
+              >
+                Book a Call
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </Button>
+            </Link>
             <Button
               size="lg"
               variant="outline"
