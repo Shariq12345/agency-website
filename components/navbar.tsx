@@ -49,13 +49,13 @@ const Navbar = () => {
             <Code className="h-5 w-5 group-hover:text-primary dark:group-hover:text-primary" />
           ),
         },
-        {
-          title: "Mobile Development",
-          href: "/services/mobile",
-          icon: (
-            <Smartphone className="h-5 w-5 group-hover:text-primary dark:group-hover:text-primary" />
-          ),
-        },
+        // {
+        //   title: "Mobile Development",
+        //   href: "/services/mobile",
+        //   icon: (
+        //     <Smartphone className="h-5 w-5 group-hover:text-primary dark:group-hover:text-primary" />
+        //   ),
+        // },
         {
           title: "UI/UX Design",
           href: "/services/design",

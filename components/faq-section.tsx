@@ -36,7 +36,7 @@ const faqs: {
     id: 2,
     question: "How long does a typical project take?",
     answer:
-      "Project timelines vary depending on scope and complexity. A typical website project takes 8-12 weeks, while larger applications may take 3-6 months. We'll provide a detailed timeline during our initial consultation.",
+      "Project timelines vary depending on scope and complexity. A typical website project takes 8-12 weeks, while larger applications may take 3-6 months. We&apos;ll provide a detailed timeline during our initial consultation.",
     category: "Process",
   },
   {

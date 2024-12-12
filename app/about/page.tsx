@@ -14,6 +14,7 @@ export default function AboutUsPage() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
+          viewport={{ once: true }}
         >
           <Badge variant="outline" className="mb-4">
             About Us
@@ -22,7 +23,7 @@ export default function AboutUsPage() {
             Turning Ideas Into Impactful Digital Solutions
           </h1>
           <p className="text-lg text-muted-foreground">
-            We’re three passionate students who joined forces to create an
+            We&apos;re three passionate students who joined forces to create an
             agency focused on delivering outstanding digital solutions. Our
             journey is built on creativity, collaboration, and an unwavering
             commitment to innovation.
@@ -35,6 +36,7 @@ export default function AboutUsPage() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="mb-16 max-w-4xl mx-auto"
+          viewport={{ once: true }}
         >
           <h2 className="text-3xl font-bold mb-6 text-center">
             The Story Behind Our Agency 🚀
@@ -83,6 +85,7 @@ export default function AboutUsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 className="bg-secondary/10 p-6 rounded-lg text-center shadow-lg"
+                viewport={{ once: true }}
               >
                 <item.icon className="w-10 h-10 text-primary mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2">{item.title}</h3>

@@ -140,19 +140,19 @@ export function Footer() {
             <div>
               <h3 className="font-semibold mb-6 text-sm">Contact Us</h3>
               <ul className="space-y-4">
-                <li className="flex items-start">
+                {/* <li className="flex items-start">
                   <MapPin className="h-4 w-4 mt-2 mr-3 text-primary shrink-0" />
                   <span className="text-muted-foreground text-sm">
                     123 Business Street, Suite 100, New York, NY 10001
                   </span>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     href="mailto:contact@example.com"
                     className="flex items-center text-muted-foreground hover:text-primary transition-colors text-sm"
                   >
                     <Mail className="h-4 w-4 mr-3" />
-                    contact@example.com
+                    askstudio.agency@gmail.com
                   </Link>
                 </li>
                 <li>
@@ -161,7 +161,7 @@ export function Footer() {
                     className="flex items-center text-muted-foreground hover:text-primary transition-colors text-sm"
                   >
                     <Phone className="h-4 w-4 mr-3" />
-                    (+91) 123-567-890
+                    (+91) 982-040-4970
                   </Link>
                 </li>
               </ul>

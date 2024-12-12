@@ -29,42 +29,42 @@ const techStacks = [
     },
     results: "45% faster page loads, 30% increase in user engagement",
   },
-  {
-    id: 2,
-    category: "Backend Development",
-    icon: Database,
-    description: "Scalable and secure server-side solutions",
-    technologies: ["Node.js", "Python", "PostgreSQL", "Redis"],
-    metrics: {
-      performance: 95,
-      satisfaction: 94,
-    },
-    results: "99.9% uptime, 60% reduced server costs",
-  },
-  {
-    id: 3,
-    category: "Mobile Development",
-    icon: Smartphone,
-    description: "Cross-platform mobile applications",
-    technologies: ["React Native", "Flutter", "Swift", "Kotlin"],
-    metrics: {
-      performance: 92,
-      satisfaction: 95,
-    },
-    results: "40% faster development cycle, 4.8★ average app rating",
-  },
-  {
-    id: 4,
-    category: "Cloud & DevOps",
-    icon: Cloud,
-    description: "Robust cloud infrastructure and deployment",
-    technologies: ["AWS", "Docker", "Kubernetes", "CI/CD"],
-    metrics: {
-      performance: 97,
-      satisfaction: 93,
-    },
-    results: "50% reduced deployment time, 99.99% service reliability",
-  },
+  // {
+  //   id: 2,
+  //   category: "Backend Development",
+  //   icon: Database,
+  //   description: "Scalable and secure server-side solutions",
+  //   technologies: ["Node.js", "Python", "PostgreSQL", "Redis"],
+  //   metrics: {
+  //     performance: 95,
+  //     satisfaction: 94,
+  //   },
+  //   results: "99.9% uptime, 60% reduced server costs",
+  // },
+  // {
+  //   id: 3,
+  //   category: "Mobile Development",
+  //   icon: Smartphone,
+  //   description: "Cross-platform mobile applications",
+  //   technologies: ["React Native", "Flutter", "Swift", "Kotlin"],
+  //   metrics: {
+  //     performance: 92,
+  //     satisfaction: 95,
+  //   },
+  //   results: "40% faster development cycle, 4.8★ average app rating",
+  // },
+  // {
+  //   id: 4,
+  //   category: "Cloud & DevOps",
+  //   icon: Cloud,
+  //   description: "Robust cloud infrastructure and deployment",
+  //   technologies: ["AWS", "Docker", "Kubernetes", "CI/CD"],
+  //   metrics: {
+  //     performance: 97,
+  //     satisfaction: 93,
+  //   },
+  //   results: "50% reduced deployment time, 99.99% service reliability",
+  // },
 ];
 
 export function TechStackSection() {

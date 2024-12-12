@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
+import Link from "next/link"; // Import the Link component
 
 const FeaturedProjects = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -23,30 +24,7 @@ const FeaturedProjects = () => {
         increase: "+127%",
         metric: "conversion rate",
       },
-    },
-    {
-      id: 2,
-      title: "Quantum E-Commerce Platform",
-      description:
-        "A next-gen shopping experience with AI-powered recommendations and seamless checkout flow.",
-      image: "/api/placeholder/800/600",
-      categories: ["E-Commerce", "UI/UX", "Development"],
-      stats: {
-        increase: "+127%",
-        metric: "conversion rate",
-      },
-    },
-    {
-      id: 3,
-      title: "Quantum E-Commerce Platform",
-      description:
-        "A next-gen shopping experience with AI-powered recommendations and seamless checkout flow.",
-      image: "/api/placeholder/800/600",
-      categories: ["E-Commerce", "UI/UX", "Development"],
-      stats: {
-        increase: "+127%",
-        metric: "conversion rate",
-      },
+      link: "https://browniebee.vercel.app", // Add the link to the project website
     },
     // ... other projects
   ];
@@ -108,13 +86,15 @@ const FeaturedProjects = () => {
                       {/* Improved hover overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                         <div className="absolute bottom-6 left-6 right-6">
-                          <Button
-                            variant="default"
-                            className="w-full bg-primary/90 hover:bg-primary"
-                          >
-                            View Project
-                            <ExternalLink className="ml-2 h-4 w-4" />
-                          </Button>
+                          <Link href={project.link} passHref>
+                            <Button
+                              variant="default"
+                              className="w-full bg-primary/90 hover:bg-primary"
+                            >
+                              View Project
+                              <ExternalLink className="ml-2 h-4 w-4" />
+                            </Button>
+                          </Link>
                         </div>
                       </div>
                     </div>
