@@ -63,13 +63,13 @@ const Navbar = () => {
             <Layout className="h-5 w-5 group-hover:text-primary dark:group-hover:text-primary" />
           ),
         },
-        {
-          title: "Branding",
-          href: "/services/branding",
-          icon: (
-            <ArrowBigUp className="h-5 w-5 group-hover:text-primary dark:group-hover:text-primary" />
-          ),
-        },
+        // {
+        //   title: "Branding",
+        //   href: "/services/branding",
+        //   icon: (
+        //     <ArrowBigUp className="h-5 w-5 group-hover:text-primary dark:group-hover:text-primary" />
+        //   ),
+        // },
       ],
     },
     {

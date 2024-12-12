@@ -163,20 +163,20 @@ export function ContactSection() {
                     icon: Mail,
                     title: "Email Us",
                     details: [
-                      "contact@youragency.com",
-                      "support@youragency.com",
+                      "askstudio.agency@gmail.com",
+                      // "support@youragency.com",
                     ],
                   },
                   {
                     icon: Phone,
                     title: "Call Us",
-                    details: ["+1 (555) 123-4567", "Mon - Fri, 9am - 6pm"],
+                    details: ["(+91) 982-040-4970", "Mon - Fri, 9am - 6pm"],
                   },
-                  {
-                    icon: MapPin,
-                    title: "Visit Us",
-                    details: ["123 Creative Avenue", "San Francisco, CA 94107"],
-                  },
+                  // {
+                  //   icon: MapPin,
+                  //   title: "Visit Us",
+                  //   details: ["123 Creative Avenue", "San Francisco, CA 94107"],
+                  // },
                   {
                     icon: Clock,
                     title: "Business Hours",
