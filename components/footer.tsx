@@ -81,7 +81,7 @@ export function Footer() {
             {/* Quick Links */}
             <div>
               <h3 className="font-semibold mb-6 text-sm">Quick Links</h3>
-              <ul className="space-y-4">
+              <ul className="space-y-3">
                 {[
                   { label: "About Us", href: "/about" },
                   { label: "Services", href: "/services" },
@@ -104,13 +104,13 @@ export function Footer() {
             {/* Services */}
             <div>
               <h3 className="font-semibold mb-6 text-sm">Services</h3>
-              <ul className="space-y-4">
+              <ul className="space-y-3">
                 {[
                   {
                     label: "Web Development",
-                    href: "/services/web-development",
+                    href: "/services/web",
                   },
-                  { label: "UI/UX Design", href: "/services/ui-ux-design" },
+                  { label: "UI/UX Design", href: "/services/design" },
                   {
                     label: "Digital Marketing",
                     href: "/services/digital-marketing",

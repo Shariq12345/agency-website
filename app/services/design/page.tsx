@@ -108,9 +108,6 @@ export default function UIUXDesignPage() {
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              <Button variant="outline" size="lg">
-                Explore Services
-              </Button>
             </div>
           </motion.div>
         </div>
@@ -235,10 +232,6 @@ export default function UIUXDesignPage() {
                   experiences that your users will love and your business needs.
                 </p>
                 <div className="flex justify-center space-x-4">
-                  <Button size="lg" className="group">
-                    Get in Touch
-                    <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
                   <Button variant="outline" size="lg">
                     Schedule Consultation
                   </Button>
