@@ -6,6 +6,8 @@ import Navbar from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 // const inter = Inter({ subsets: ["latin"] });
 const font = Space_Grotesk({ subsets: ["latin"] });
 
@@ -25,12 +27,13 @@ export default function RootLayout({
       <body className={font.className}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
           <Navbar />
           {children}
+          <SpeedInsights />
         </ThemeProvider>
         <Footer />
       </body>
