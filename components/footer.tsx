@@ -148,7 +148,7 @@ export function Footer() {
                 </li> */}
                 <li>
                   <Link
-                    href="mailto:contact@example.com"
+                    href="mailto:askstudio.agency@gmail.com"
                     className="flex items-center text-muted-foreground hover:text-primary transition-colors text-sm"
                   >
                     <Mail className="h-4 w-4 mr-3" />
@@ -157,7 +157,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="tel:+1234567890"
+                    href="tel:(+91) 982-040-4970"
                     className="flex items-center text-muted-foreground hover:text-primary transition-colors text-sm"
                   >
                     <Phone className="h-4 w-4 mr-3" />
