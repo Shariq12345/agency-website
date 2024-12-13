@@ -20,6 +20,12 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
   },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://askstudio.agency",
+    siteName: "ASK Studio",
+  },
 };
 
 export default function RootLayout({

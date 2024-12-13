@@ -4,6 +4,14 @@ import React from "react";
 export const metadata: Metadata = {
   title: "UI/UX Design Service",
   description: "Design Service",
+  openGraph: {
+    title: "UI/UX Design Service",
+    description: "Design Service",
+    type: "website",
+    url: "https://example.com/design",
+    siteName: "UI/UX Design Service",
+    locale: "en_US",
+  },
 };
 
 interface DesignServiceLayoutProps {
