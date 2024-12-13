@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-// import { Inter } from "next/font/google";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
@@ -8,13 +7,18 @@ import { ThemeProvider } from "@/components/theme-provider";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-// const inter = Inter({ subsets: ["latin"] });
 const font = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ASK Digital - Web Development, Mobile Development, UI/UX Design",
+  title: {
+    default: "ASK Studio | Web Development, Mobile Apps, UI/UX Design",
+    template: "%s | ASK Studio",
+  },
   description:
-    "ASK Digital is a web development agency that specializes in web development, mobile development, and UI/UX design.",
+    "ASK Studio delivers expert web development, mobile apps, and UI/UX design. Build innovative, user-friendly solutions tailored to your business needs.",
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({

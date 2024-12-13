@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function UIUXDesignPage() {
   const services = [
@@ -208,10 +209,11 @@ export default function UIUXDesignPage() {
                 className="relative"
               >
                 <div className="aspect-video rounded-xl overflow-hidden shadow-2xl">
-                  <img
-                    src="/design-process.webp"
+                  <Image
+                    src={"/design-process.webp"}
                     alt="UI/UX Design Process"
-                    className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+                    fill
+                    className="transition-transform duration-300 hover:scale-105"
                   />
                 </div>
               </motion.div>

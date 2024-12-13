@@ -11,37 +11,38 @@ const teamMembers = [
     id: 1,
     name: "Arman Noyda",
     role: "Client Success Manager",
-    image: "/team/sarah.jpg", // Add team member images to your public folder
+    image: "/team/armaan-avatar.png", // Add team member images to your public folder
     bio: "Ensuring client satisfaction and success through innovative solutions.",
     specialties: ["Client Relations", "Project Management"],
     social: {
-      linkedin: "https://linkedin.com/in/sarahchen",
-      twitter: "https://twitter.com/sarahchen",
-      github: "https://github.com/sarahchen",
+      linkedin: "https://www.linkedin.com/in/armaan-noyada-92943023b/",
+      // twitter: "https://twitter.com/sarahchen",
+      github: "https://github.com/Armannoyada",
     },
   },
   {
     id: 2,
     name: "Shariq Shaikh",
     role: "Technical Lead",
-    image: "/team/michael.jpg",
+    image: "/team/shariq-avatar.png",
     bio: "Building scalable web applications with cutting-edge technologies.",
     specialties: ["React", "Node.js"],
     social: {
-      linkedin: "https://linkedin.com/in/michaelroberts",
-      github: "https://github.com/michaelroberts",
+      linkedin: "https://www.linkedin.com/in/shariq-shaikh-621a8a222/",
+      github: "https://github.com/Shariq12345",
     },
   },
   {
     id: 3,
     name: "Khwahish",
     role: "SEO & Brand Expert",
-    image: "/team/emma.jpg",
+    image: "/team/khwahish-avatar.png",
     bio: "Helping brands grow their online presence through effective SEO strategies.",
     specialties: ["SEO", "Content Marketing"],
     social: {
-      linkedin: "https://linkedin.com/in/emmathompson",
-      twitter: "https://twitter.com/emmathompson",
+      linkedin:
+        "https://www.linkedin.com/in/mohammad-khwahish-siddiqui-8794161b9/",
+      // twitter: "https://twitter.com/emmathompson",
     },
   },
   // Add more team members as needed
@@ -132,7 +133,7 @@ export function TeamSection() {
                             <Linkedin className="h-5 w-5" />
                           </a>
                         )}
-                        {member.social.twitter && (
+                        {/* {member.social.twitter && (
                           <a
                             href={member.social.twitter}
                             target="_blank"
@@ -141,7 +142,7 @@ export function TeamSection() {
                           >
                             <Twitter className="h-5 w-5" />
                           </a>
-                        )}
+                        )} */}
                         {member.social.github && (
                           <a
                             href={member.social.github}
