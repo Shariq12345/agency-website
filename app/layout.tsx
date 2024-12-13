@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 const font = Space_Grotesk({ subsets: ["latin"] });
 
@@ -36,6 +37,7 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
+          <Analytics />
           <SpeedInsights />
         </ThemeProvider>
         <Footer />
