@@ -138,7 +138,7 @@ const FeaturedProjects = () => {
           </div>
 
           {/* Enhanced CTA button */}
-          <motion.div
+          {/* <motion.div
             className="text-center mt-20"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -153,7 +153,7 @@ const FeaturedProjects = () => {
               View All Projects
               <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
-          </motion.div>
+          </motion.div> */}
         </div>
       </section>
     </div>

@@ -39,7 +39,7 @@ const Navbar = () => {
       title: "Home",
       href: "/",
     },
-    {
+    { 
       title: "Services",
       items: [
         {
@@ -71,6 +71,10 @@ const Navbar = () => {
         //   ),
         // },
       ],
+    },
+    {
+      title: "Projects",
+      href: "/projects",
     },
     {
       title: "About",

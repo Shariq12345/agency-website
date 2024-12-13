@@ -188,13 +188,15 @@ export function HeroSection() {
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Button>
             </Link>
-            <Button
-              size="lg"
-              variant="outline"
-              className="min-w-[200px] border-primary/20 text-primary hover:bg-primary/5 backdrop-blur-sm"
-            >
-              View Our Work
-            </Button>
+            <Link href={"/projects"}>
+              <Button
+                size="lg"
+                variant="outline"
+                className="min-w-[200px] border-primary/20 text-primary hover:bg-primary/5 backdrop-blur-sm"
+              >
+                View Our Work
+              </Button>
+            </Link>
           </motion.div>
 
           {/* Animated Stats Section */}

@@ -24,34 +24,34 @@ export function Testimonials() {
   const testimonials: Testimonial[] = [
     {
       id: 1,
-      name: "Sarah Chen",
-      role: "CEO",
-      company: "TechVision Inc",
-      image: "/testimonials/sarah.jpg", // Add your image paths
+      name: "Arshad Siddique",
+      role: "Owner",
+      company: "Brownie Bee",
+      image: "/testimonials/arshad.png", // Add your image paths
       quote:
-        "Working with this agency was transformative for our brand. They didn't just deliver a website; they created a digital experience that perfectly captures our vision. The attention to detail and creative solutions exceeded our expectations.",
+        "I am very happy with the work done by ASK Studio. They are very professional and have a great team. I will definitely recommend them to my friends and family.",
       rating: 5,
     },
-    {
-      id: 2,
-      name: "James Wilson",
-      role: "Marketing Director",
-      company: "Innovate Labs",
-      image: "/testimonials/james.jpg",
-      quote:
-        "The team's expertise in both design and development is exceptional. They brought fresh perspectives to our project and delivered a solution that has significantly improved our user engagement metrics.",
-      rating: 5,
-    },
-    {
-      id: 3,
-      name: "Elena Rodriguez",
-      role: "Product Manager",
-      company: "Digital First",
-      image: "/testimonials/elena.jpg",
-      quote:
-        "Their collaborative approach and technical expertise made the entire process smooth and efficient. The final product not only looks stunning but has helped us achieve our business objectives.",
-      rating: 5,
-    },
+    // {
+    //   id: 2,
+    //   name: "James Wilson",
+    //   role: "Marketing Director",
+    //   company: "Innovate Labs",
+    //   image: "/testimonials/james.jpg",
+    //   quote:
+    //     "The team's expertise in both design and development is exceptional. They brought fresh perspectives to our project and delivered a solution that has significantly improved our user engagement metrics.",
+    //   rating: 5,
+    // },
+    // {
+    //   id: 3,
+    //   name: "Elena Rodriguez",
+    //   role: "Product Manager",
+    //   company: "Digital First",
+    //   image: "/testimonials/elena.jpg",
+    //   quote:
+    //     "Their collaborative approach and technical expertise made the entire process smooth and efficient. The final product not only looks stunning but has helped us achieve our business objectives.",
+    //   rating: 5,
+    // },
   ];
 
   const nextSlide = () => {
