@@ -62,15 +62,17 @@ export function Footer() {
               </p>
               <div className="flex space-x-4">
                 {[
-                  { icon: Facebook, href: "#" },
-                  { icon: Twitter, href: "#" },
-                  { icon: Instagram, href: "#" },
-                  { icon: Linkedin, href: "#" },
+                  // { icon: Facebook, href: "#" },
+                  {
+                    icon: Instagram,
+                    href: "https://www.instagram.com/ask_studio.agency/",
+                  },
                 ].map((social, index) => (
                   <Link
                     key={index}
                     href={social.href}
                     className="text-muted-foreground hover:text-primary transition-colors"
+                    target="_blank"
                   >
                     <social.icon className="h-5 w-5" />
                   </Link>
@@ -83,11 +85,10 @@ export function Footer() {
               <h3 className="font-semibold mb-6 text-sm">Quick Links</h3>
               <ul className="space-y-3">
                 {[
-                  { label: "About Us", href: "/about" },
-                  { label: "Services", href: "/services" },
                   { label: "Projects", href: "/projects" },
-                  { label: "Blog", href: "/blog" },
-                  { label: "Careers", href: "/careers" },
+                  { label: "About Us", href: "/about" },
+                  // { label: "Blog", href: "/blog" },
+                  // { label: "Careers", href: "/careers" },
                 ].map((link, index) => (
                   <li key={index}>
                     <Link
@@ -113,16 +114,16 @@ export function Footer() {
                   { label: "UI/UX Design", href: "/services/design" },
                   {
                     label: "Digital Marketing",
-                    href: "/services/digital-marketing",
+                    href: "/services/marketing",
                   },
-                  {
-                    label: "Mobile Development",
-                    href: "/services/mobile-development",
-                  },
-                  {
-                    label: "Cloud Solutions",
-                    href: "/services/cloud-solutions",
-                  },
+                  // {
+                  //   label: "Mobile Development",
+                  //   href: "/services/mobile-development",
+                  // },
+                  // {
+                  //   label: "Cloud Solutions",
+                  //   href: "/services/cloud-solutions",
+                  // },
                 ].map((service, index) => (
                   <li key={index}>
                     <Link

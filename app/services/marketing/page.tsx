@@ -2,15 +2,15 @@
 
 import { motion } from "framer-motion";
 import {
-  Palette,
-  Users,
-  Laptop,
-  Brain,
-  Layout,
-  Smartphone,
+  BarChart,
+  Search,
+  Mail,
+  TrendingUp,
+  Share2,
+  MessageSquare,
   ArrowRight,
   CheckCircle,
-  Send,
+  Target,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -18,53 +18,53 @@ import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function UIUXDesignPage() {
+export default function DigitalMarketingPage() {
   const services = [
     {
-      icon: <Layout className="h-6 w-6" />,
-      title: "Interface Design",
+      icon: <Search className="h-6 w-6" />,
+      title: "SEO Optimization",
       description:
-        "Creating intuitive and visually appealing user interfaces that enhance engagement and satisfaction.",
+        "Boost your search rankings and drive organic traffic through strategic SEO implementation.",
     },
     {
-      icon: <Users className="h-6 w-6" />,
-      title: "User Research",
+      icon: <BarChart className="h-6 w-6" />,
+      title: "Analytics & Reporting",
       description:
-        "Deep analysis of user behavior to inform design decisions and create user-centered solutions.",
+        "Data-driven insights and comprehensive reporting to track and optimize campaign performance.",
     },
     {
-      icon: <Laptop className="h-6 w-6" />,
-      title: "Responsive Design",
+      icon: <Share2 className="h-6 w-6" />,
+      title: "Social Media Marketing",
       description:
-        "Ensuring seamless experiences across all devices with adaptive and flexible layouts.",
+        "Engage your audience and build brand presence across all major social platforms.",
     },
     {
-      icon: <Brain className="h-6 w-6" />,
-      title: "UX Strategy",
+      icon: <Mail className="h-6 w-6" />,
+      title: "Email Marketing",
       description:
-        "Developing strategies that align user needs with business objectives.",
+        "Strategic email campaigns that nurture leads and drive conversions.",
     },
     {
-      icon: <Smartphone className="h-6 w-6" />,
-      title: "Mobile-First Design",
+      icon: <TrendingUp className="h-6 w-6" />,
+      title: "PPC Advertising",
       description:
-        "Prioritizing mobile experiences while maintaining cross-platform consistency.",
+        "Targeted paid advertising campaigns that maximize ROI and reach.",
     },
     {
-      icon: <Palette className="h-6 w-6" />,
-      title: "Visual Design",
+      icon: <MessageSquare className="h-6 w-6" />,
+      title: "Content Marketing",
       description:
-        "Creating visual elements that reinforce brand identity and boost user engagement.",
+        "Compelling content strategy that resonates with your audience and drives engagement.",
     },
   ];
 
   const benefits = [
-    "User-centered approach",
-    "Data-driven decisions",
-    "Consistent brand experience",
-    "Improved user satisfaction",
+    "Increased brand visibility",
     "Higher conversion rates",
-    "Reduced development costs",
+    "Measurable ROI",
+    "Targeted audience reach",
+    "Competitive advantage",
+    "Scalable growth",
   ];
 
   return (
@@ -84,7 +84,7 @@ export default function UIUXDesignPage() {
             className="text-center max-w-4xl mx-auto"
           >
             <Badge variant="outline" className="mb-4">
-              UI/UX Design Excellence
+              Digital Marketing Solutions
             </Badge>
 
             <h1
@@ -93,19 +93,18 @@ export default function UIUXDesignPage() {
               bg-clip-text text-transparent
               leading-tight"
             >
-              Elevate Digital Experiences
+              Amplify Your Digital Presence
             </h1>
 
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              We craft intuitive, engaging user experiences that drive
-              satisfaction and business growth through innovative,
-              research-driven design solutions.
+              Strategic digital marketing solutions that drive growth, engage
+              audiences, and deliver measurable results for your business.
             </p>
 
             <div className="flex justify-center space-x-4">
               <Link href="/meeting">
                 <Button size="lg" className="group">
-                  Book a Call
+                  Get Free Consultation
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
@@ -126,11 +125,11 @@ export default function UIUXDesignPage() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Comprehensive UI/UX Services
+                Comprehensive Digital Marketing Services
               </h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                End-to-end design solutions that transform digital experiences
-                and delight users.
+                Tailored marketing solutions that help your business thrive in
+                the digital landscape.
               </p>
             </motion.div>
 
@@ -145,15 +144,15 @@ export default function UIUXDesignPage() {
                 >
                   <Card
                     className="h-full bg-card/50 backdrop-blur-sm 
-                  border-transparent hover:border-primary/20 
-                  transition-all duration-300 hover:shadow-lg 
-                  hover:scale-[1.02]"
+                    border-transparent hover:border-primary/20 
+                    transition-all duration-300 hover:shadow-lg 
+                    hover:scale-[1.02]"
                   >
                     <CardContent className="p-6 flex flex-col h-full">
                       <div
                         className="bg-primary/10 w-12 h-12 rounded-lg 
-                      flex items-center justify-center 
-                      text-primary mb-4"
+                        flex items-center justify-center 
+                        text-primary mb-4"
                       >
                         {service.icon}
                       </div>
@@ -173,7 +172,7 @@ export default function UIUXDesignPage() {
 
         {/* Benefits Section */}
         <section className="py-16 md:py-24">
-          <div className="container mx-auto px-4">
+          <div className=" px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -182,7 +181,7 @@ export default function UIUXDesignPage() {
                 transition={{ duration: 0.6 }}
               >
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                  Why Choose Our Design Services?
+                  Why Choose Our Digital Marketing Services?
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {benefits.map((benefit, index) => (
@@ -194,7 +193,7 @@ export default function UIUXDesignPage() {
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       className="flex items-center space-x-3"
                     >
-                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                      <Target className="h-5 w-5 text-primary flex-shrink-0" />
                       <span className="text-sm md:text-base">{benefit}</span>
                     </motion.div>
                   ))}
@@ -210,8 +209,8 @@ export default function UIUXDesignPage() {
               >
                 <div className="aspect-video rounded-xl overflow-hidden shadow-2xl">
                   <Image
-                    src={"/design-process.webp"}
-                    alt="UI/UX Design Process"
+                    src={"/marketing/marketing1.png"}
+                    alt="Digital Marketing Strategy"
                     fill
                     className="transition-transform duration-300 hover:scale-105"
                   />
@@ -227,11 +226,12 @@ export default function UIUXDesignPage() {
             <Card className="border-0 bg-primary text-primary-foreground">
               <CardContent className="p-8 md:p-12 text-center">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                  Ready to Transform Your Digital Experience?
+                  Ready to Grow Your Digital Presence?
                 </h2>
                 <p className="text-primary-foreground/90 max-w-2xl mx-auto mb-8">
-                  Let&apos;s collaborate and create exceptional digital
-                  experiences that your users will love and your business needs.
+                  Let's create a customized digital marketing strategy that
+                  helps you achieve your business goals and reach your target
+                  audience.
                 </p>
                 <div className="flex justify-center space-x-4">
                   <Button
@@ -250,4 +250,26 @@ export default function UIUXDesignPage() {
       </div>
     </div>
   );
+}
+
+{
+  /* <section className="py-20">
+  <div className="container mx-auto px-4">
+    <Card className="bg-primary text-primary-foreground">
+      <CardContent className="p-12 text-center">
+        <h2 className="text-3xl font-bold mb-4">
+          Ready to Build Your Web Solution?
+        </h2>
+        <p className="text-primary-foreground/90 max-w-2xl mx-auto mb-8">
+          Let&apos;s discuss how we can help you create a powerful web
+          application that drives your business forward.
+        </p>
+        <Button variant="secondary" size="lg" className="min-w-[200px]">
+          Contact Us
+          <ArrowRight className="ml-2 h-4 w-4" />
+        </Button>
+      </CardContent>
+    </Card>
+  </div>
+</section>; */
 }

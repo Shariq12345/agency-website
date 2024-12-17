@@ -149,3 +149,53 @@
   background-size: 200%;
   animation: gradient 8s linear infinite;
 }
+
+/* Modern scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(244 244 245); /* Light gray, matches your theme */
+  border-radius: 100vh;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(161 161 170); /* Zinc-400 */
+  border-radius: 100vh;
+  border: 2px solid rgb(244 244 245); /* Creates padding effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(113 113 122); /* Zinc-500 */
+}
+
+/* For dark mode */
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-track {
+    background: rgb(39 39 42); /* Zinc-800 */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(113 113 122); /* Zinc-500 */
+    border: 2px solid rgb(39 39 42);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(161 161 170); /* Zinc-400 */
+  }
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(161 161 170) rgb(244 244 245);
+}
+
+@media (prefers-color-scheme: dark) {
+  * {
+    scrollbar-color: rgb(113 113 122) rgb(39 39 42);
+  }
+}
+
