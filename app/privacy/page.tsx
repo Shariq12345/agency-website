@@ -140,7 +140,7 @@ export default function PrivacyPolicy() {
               Questions About Our Privacy Policy?
             </h2>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              We're here to help clarify any concerns about how we handle your
+              We&apos;re here to help clarify any concerns about how we handle your
               data.
             </p>
             <Button

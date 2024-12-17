@@ -229,7 +229,7 @@ export default function DigitalMarketingPage() {
                   Ready to Grow Your Digital Presence?
                 </h2>
                 <p className="text-primary-foreground/90 max-w-2xl mx-auto mb-8">
-                  Let's create a customized digital marketing strategy that
+                  Let&apos;s create a customized digital marketing strategy that
                   helps you achieve your business goals and reach your target
                   audience.
                 </p>

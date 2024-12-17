@@ -143,7 +143,7 @@ export default function TermsOfService() {
               Questions About Our Terms?
             </h2>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              We're here to help clarify any concerns about our terms of
+              We&apos;re here to help clarify any concerns about our terms of
               service.
             </p>
             <Button
