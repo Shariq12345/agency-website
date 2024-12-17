@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+import { Toaster } from "sonner";
 
 const font = Space_Grotesk({ subsets: ["latin"] });
 
@@ -41,6 +42,7 @@ export default function RootLayout({
           defaultTheme="light"
           disableTransitionOnChange
         >
+          <Toaster />
           <Navbar />
           {children}
           <Analytics />
