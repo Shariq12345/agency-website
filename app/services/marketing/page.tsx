@@ -17,6 +17,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
+import { handleCall } from "@/lib/handleCall";
 
 export default function DigitalMarketingPage() {
   const services = [
@@ -104,7 +105,7 @@ export default function DigitalMarketingPage() {
             <div className="flex justify-center space-x-4">
               <Link href="/meeting">
                 <Button size="lg" className="group">
-                  Get Free Consultation
+                  Book a Call
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
@@ -235,6 +236,7 @@ export default function DigitalMarketingPage() {
                 </p>
                 <div className="flex justify-center space-x-4">
                   <Button
+                    onClick={handleCall}
                     variant="secondary"
                     size="lg"
                     className="min-w-[200px]"

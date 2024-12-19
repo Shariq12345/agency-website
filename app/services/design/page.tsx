@@ -17,6 +17,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
+import { handleCall } from "@/lib/handleCall";
 
 export default function UIUXDesignPage() {
   const services = [
@@ -235,6 +236,7 @@ export default function UIUXDesignPage() {
                 </p>
                 <div className="flex justify-center space-x-4">
                   <Button
+                    onClick={handleCall}
                     variant="secondary"
                     size="lg"
                     className="min-w-[200px]"

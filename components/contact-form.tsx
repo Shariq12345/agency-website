@@ -6,15 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import {
-  Mail,
-  MessageSquare,
-  Phone,
-  MapPin,
-  Send,
-  Clock,
-  CheckCircle2,
-} from "lucide-react";
+import { Mail, Phone, Send, Clock, CheckCircle2 } from "lucide-react";
 
 export function ContactSection() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -162,21 +154,13 @@ export function ContactSection() {
                   {
                     icon: Mail,
                     title: "Email Us",
-                    details: [
-                      "askstudio.agency@gmail.com",
-                      // "support@youragency.com",
-                    ],
+                    details: ["askstudio.agency@gmail.com"],
                   },
                   {
                     icon: Phone,
                     title: "Call Us",
                     details: ["(+91) 982-040-4970", "Mon - Fri, 9am - 6pm"],
                   },
-                  // {
-                  //   icon: MapPin,
-                  //   title: "Visit Us",
-                  //   details: ["123 Creative Avenue", "San Francisco, CA 94107"],
-                  // },
                   {
                     icon: Clock,
                     title: "Business Hours",

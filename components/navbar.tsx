@@ -39,7 +39,7 @@ const Navbar = () => {
       title: "Home",
       href: "/",
     },
-    { 
+    {
       title: "Services",
       items: [
         {
@@ -155,8 +155,7 @@ const Navbar = () => {
                           onClick={handleLinkClick}
                           className={cn(
                             "group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent dark:hover:bg-accent",
-                            pathname === item.href &&
-                              "bg-accent text-accent-foreground"
+                            pathname === item.href && "bg-accent text-primary"
                           )}
                         >
                           <span>{item.title}</span>

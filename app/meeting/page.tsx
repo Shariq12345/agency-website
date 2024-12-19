@@ -1,5 +1,4 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 import { Calendly } from "./calendly";
@@ -11,22 +10,22 @@ const checkItemVariants = {
 
 const Meeting = () => {
   return (
-    <div className="flex flex-col w-full overflow-clip inset-0 -z-10 bg-[#fafafa] bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+    <div className="flex flex-col w-full overflow-clip inset-0 -z-10 bg-[#fafafa] dark:bg-gray-900 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:14px_24px]">
       <div className="md:px-0 px-6 xl:w-4/5 2xl:w-[68%] justify-between md:mt-[8rem] md:flex mx-auto">
         <div className="md:w-2/5">
-          <h1 className="text-4xl font-semibold pt-20">Let&apos;s Meet</h1>
-          <p className="text-lg text-gray-500 py-4">
+          <h1 className="text-4xl font-semibold pt-20 text-gray-900 dark:text-white">
+            Let&apos;s Meet
+          </h1>
+          <p className="text-lg text-gray-500 dark:text-gray-400 py-4">
             We are always excited to meet new people and discuss new projects.
             Please feel free to book a meeting with us.
           </p>
-
           {[
             {
               title: "Development + Design",
               description:
                 "Turn your ideas into reality with our development and design services.",
             },
-
             {
               title: "Free Consultation",
               description:
@@ -46,17 +45,18 @@ const Meeting = () => {
               transition={{ delay: index * 1.2 }}
               className="flex gap-x-4 py-4"
             >
-              <CheckCircle className=" rounded-md text-rose-500 text-2xl flex-shrink-0" />
+              <CheckCircle className="rounded-md text-rose-500 dark:text-rose-400 text-2xl flex-shrink-0" />
               <ul>
-                <h3 className="text-lg font-bold text-gray-700">
+                <h3 className="text-lg font-bold text-gray-700 dark:text-gray-200">
                   {item.title}
                 </h3>
-                <div className="text-gray-400">{item.description}</div>
+                <div className="text-gray-400 dark:text-gray-500">
+                  {item.description}
+                </div>
               </ul>
             </motion.div>
           ))}
         </div>
-
         <div className="md:w-1/2">
           <Calendly />
         </div>

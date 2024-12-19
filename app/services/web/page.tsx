@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { handleCall } from "@/lib/handleCall";
 
 const WebDevelopmentPage = () => {
   const services = [
@@ -43,8 +44,8 @@ const WebDevelopmentPage = () => {
     { name: "Next.js", image: "/tech/nextjs.svg" },
     { name: "TypeScript", image: "/tech/typescript.svg" },
     { name: "Node.js", image: "/tech/nodejs.svg" },
-    { name: "PostgreSQL", image: "/tech/postgresql.svg" },
-    { name: "Docker", image: "/tech/docker.svg" },
+    { name: "TailwindCSS", image: "/tech/tailwind.svg" },
+    { name: "Framer", image: "/tech/framer-motion.svg" },
   ];
 
   const developmentProcess = [
@@ -98,12 +99,15 @@ const WebDevelopmentPage = () => {
               Crafting robust, scalable web applications tailored to your
               business needs.
             </p>
-            <Link href="/meeting">
-              <Button size="lg" className="min-w-[200px]">
-                Book a Call
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
+
+            <div className="flex justify-center space-x-4">
+              <Link href="/meeting">
+                <Button size="lg" className="group">
+                  Book a Call
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -228,7 +232,12 @@ const WebDevelopmentPage = () => {
                   Let&apos;s discuss how we can help you create a powerful web
                   application that drives your business forward.
                 </p>
-                <Button variant="secondary" size="lg" className="min-w-[200px]">
+                <Button
+                  onClick={handleCall}
+                  variant="secondary"
+                  size="lg"
+                  className="min-w-[200px]"
+                >
                   Contact Us
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
