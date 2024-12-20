@@ -3,49 +3,49 @@ import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
+      url: `https://www.askstudio.agency`,
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 1,
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/services/web`,
+      url: `https://www.askstudio.agency/services/web`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/services/design`,
+      url: `https://www.askstudio.agency/services/design`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/about`,
+      url: `https://www.askstudio.agency/about`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/contact`,
+      url: `https://www.askstudio.agency/contact`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.5,
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/meeting`,
+      url: `https://www.askstudio.agency/meeting`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.5,
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/privacy`,
+      url: `https://www.askstudio.agency/privacy`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.5,
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/terms`,
+      url: `https://www.askstudio.agency/terms`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.5,

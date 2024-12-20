@@ -5,7 +5,6 @@ import { TeamSection } from "@/components/team-section";
 import { ProcessTimeline } from "@/components/process-timeline";
 import { TechStackSection } from "@/components/tech-stack";
 import { FAQSection } from "@/components/faq-section";
-import { ContactSection } from "@/components/contact-form";
 
 export default function Home() {
   return (
