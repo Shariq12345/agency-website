@@ -46,7 +46,7 @@ const ProjectsShowcase = () => {
         increase: "+127%",
         metric: "conversion rate",
       },
-      link: "https://browniebee.vercel.app",
+      link: "https://mahalaxmiart.in",
     },
   ];
 

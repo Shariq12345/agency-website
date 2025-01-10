@@ -18,13 +18,26 @@ const FeaturedProject = () => {
       title: "Brownie Bee Cake Shop",
       description:
         "A modern e-commerce platform with a focus on delightful user experience and high conversion rates.",
-      image: "/project1.png",
+      image: "/projects/project1.png",
       categories: ["E-Commerce", "UI/UX", "Development"],
       stats: {
         increase: "+127%",
         metric: "conversion rate",
       },
       link: "https://browniebee.vercel.app", // Add the link to the project website
+    },
+    {
+      id: 1,
+      title: "Mahalaxmi Art - Interior Website",
+      description:
+        "A modern interior design website to showcase the projects of an interior designer company.",
+      image: "/projects/project2.png",
+      categories: ["Modern Design", "UI/UX", "Development"],
+      stats: {
+        increase: "+127%",
+        metric: "conversion rate",
+      },
+      link: "https://mahalaxmiart.in",
     },
     // ... other projects
   ];
