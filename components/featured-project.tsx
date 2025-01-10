@@ -9,7 +9,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link"; // Import the Link component
 
-const FeaturedProjects = () => {
+const FeaturedProject = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const projects = [
@@ -160,4 +160,4 @@ const FeaturedProjects = () => {
   );
 };
 
-export default FeaturedProjects;
+export default FeaturedProject;

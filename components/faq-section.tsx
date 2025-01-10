@@ -131,3 +131,28 @@ export function FAQSection() {
     </div>
   );
 }
+
+export function FAQSchema() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "What services does ASK Studio offer?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "ASK Studio offers professional web development, UI/UX design, and digital marketing services...",
+              },
+            },
+            // Add more FAQ items
+          ],
+        }),
+      }}
+    />
+  );
+}

@@ -1,12 +1,12 @@
 import React from "react";
 import { ProjectsHero } from "./_components/hero";
-import FeaturedProjects from "@/components/featured-project";
+import ProjectsShowcase from "./_components/projects-showcase";
 
 const ProjectsPage = () => {
   return (
     <div>
       <ProjectsHero />
-      <FeaturedProjects />
+      <ProjectsShowcase />
     </div>
   );
 };
