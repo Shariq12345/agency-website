@@ -38,7 +38,10 @@ export function ContactSection() {
               Contact Us
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-              Start Your Project Journey
+              Start Your Project{" "}
+              <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+                Journey
+              </span>
             </h2>
             <p className="text-muted-foreground text-base md:text-lg max-w-xl mx-auto">
               Ready to elevate your digital strategy? Reach out and let&apos;s

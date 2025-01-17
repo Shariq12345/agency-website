@@ -79,7 +79,12 @@ export function Testimonials() {
             Testimonials
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            What Our Clients Say
+            What Our{" "}
+            <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+              Clients
+            </span>{" "}
+            {""}
+            Say
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Don&apos;t just take our word for it - hear from some of our

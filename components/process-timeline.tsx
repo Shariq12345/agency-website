@@ -56,7 +56,12 @@ export function ProcessTimeline() {
           <Badge variant="outline" className="mb-4">
             Our Process
           </Badge>
-          <h2 className="text-3xl font-bold mb-4">How We Work</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            How We{" "}
+            <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+              Work
+            </span>
+          </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Our proven methodology ensures successful project delivery through a
             structured yet flexible approach.

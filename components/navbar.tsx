@@ -14,6 +14,7 @@ import { cn } from "@/lib/utils";
 import { ModeToggle } from "./mode-toggle";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -98,9 +99,19 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link href="/" className="text-xl font-extrabold text-primary">
-              ASK.
+          <div className="flex-shrink-0 flex items-center space-x-2">
+            <Link
+              href="/"
+              className="flex items-center text-xl font-extrabold text-primary"
+            >
+              <Image
+                src="/logo.svg"
+                alt="Logo"
+                width={22}
+                height={22}
+                className="mr-2"
+              />
+              <span>ASK</span>
             </Link>
           </div>
 

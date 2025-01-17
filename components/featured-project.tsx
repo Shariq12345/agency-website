@@ -177,14 +177,16 @@ const FeaturedProject = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <Button
-            size="lg"
-            variant="outline"
-            className="group border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-          >
-            View All Projects
-            <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-          </Button>
+          <Link href="/projects">
+            <Button
+              size="lg"
+              variant="outline"
+              className="group border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            >
+              View All Projects
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Button>
+          </Link>
         </motion.div>
       </div>
     </section>

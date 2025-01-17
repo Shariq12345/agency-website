@@ -79,7 +79,7 @@ export function FAQSection() {
                 Frequently Asked
               </Badge>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
               FAQ
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">

@@ -85,8 +85,11 @@ export function TechStackSection() {
             <Badge variant="outline" className="mb-4">
               Our Technology Stack
             </Badge>
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
-              Cutting-Edge Technologies
+            <h2 className="text-4xl font-bold mb-6">
+              Cutting-Edge{" "}
+              <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+                Technologies
+              </span>
             </h2>
             <p className="text-muted-foreground text-lg">
               We leverage the latest technologies and best practices to deliver

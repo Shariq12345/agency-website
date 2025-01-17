@@ -64,8 +64,11 @@ export function TeamSection() {
             <Badge variant="outline" className="mb-4">
               Our Team
             </Badge>
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
-              Meet the Experts
+            <h2 className="text-4xl font-bold mb-6">
+              Meet the {""}{" "}
+              <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+                Experts
+              </span>
             </h2>
             <p className="text-lg text-muted-foreground">
               Our talented team of creative professionals dedicated to
