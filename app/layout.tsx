@@ -15,12 +15,11 @@ const font = Space_Grotesk({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://askstudio.agency"),
   title: {
-    default:
-      "ASK Studio | Professional Web Development, UI/UX Design & Digital Marketing Agency",
+    default: "ASK Studio | Web Development, UI/UX Design & Digital Marketing",
     template: "%s | ASK Studio",
   },
   description:
-    "ASK Studio is a leading digital agency specializing in web development, UI/UX design, and digital marketing solutions. Transform your business with our innovative digital solutions.",
+    "ASK Studio delivers web development, UI/UX design, and digital marketing services to help businesses grow and build a strong online presence.",
   keywords: [
     "web development",
     "UI/UX design",
